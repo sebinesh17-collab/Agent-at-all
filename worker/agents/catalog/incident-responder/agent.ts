@@ -1,0 +1,16 @@
+import { systemPrompt } from './prompt';
+import { allowedTools } from './tools';
+
+export const agent = {
+  id: 'incident-responder',
+  name: 'Incident Responder',
+  role: 'Operations',
+  job: "Triage incidents, preserve evidence, prioritize recovery, and write postmortems.",
+  systemPrompt,
+  allowedTools: [...allowedTools],
+  provider: 'openai',
+  model: 'gpt-4.1-mini',
+  defaultEnabled: true,
+  maxParallelTasks: 4,
+  timeoutMs: 120000,
+} as const;

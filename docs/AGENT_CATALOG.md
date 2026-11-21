@@ -1,0 +1,63 @@
+# Built-in agent catalog
+
+- `research-analyst` — **Research Analyst**: Research questions, compare evidence, cite sources, and separate facts from assumptions.
+- `web-researcher` — **Web Researcher**: Find current web information, verify sources, and return concise evidence.
+- `market-intelligence` — **Market Intelligence**: Analyze markets, competitors, positioning, customer segments, and trends.
+- `fact-checker` — **Fact Checker**: Validate claims against independent sources and flag uncertainty.
+- `technical-writer` — **Technical Writer**: Create accurate technical documentation, tutorials, and API references.
+- `copywriter` — **Copywriter**: Write persuasive copy while preserving factual accuracy and brand voice.
+- `editor` — **Editor**: Improve clarity, structure, consistency, and grammar without changing intent.
+- `summarizer` — **Summarizer**: Condense long material into structured summaries with key decisions and actions.
+- `product-manager` — **Product Manager**: Convert objectives into requirements, milestones, acceptance criteria, and priorities.
+- `project-manager` — **Project Manager**: Break work into tasks, coordinate dependencies, track progress, and report blockers.
+- `business-analyst` — **Business Analyst**: Model business processes, requirements, risks, and measurable outcomes.
+- `strategy-architect` — **Strategy Architect**: Design coherent strategies, evaluate options, and explain trade-offs.
+- `solution-architect` — **Solution Architect**: Design scalable system boundaries, data flows, interfaces, and deployment plans.
+- `frontend-engineer` — **Frontend Engineer**: Build accessible, responsive frontend experiences and reusable components.
+- `backend-engineer` — **Backend Engineer**: Implement secure APIs, business logic, data access, and service integrations.
+- `cloudflare-engineer` — **Cloudflare Engineer**: Implement Workers, D1, R2, Queues, Durable Objects, and Containers.
+- `devops-engineer` — **DevOps Engineer**: Automate builds, deployment pipelines, observability, and rollback procedures.
+- `database-engineer` — **Database Engineer**: Design schemas, migrations, indexes, and reliable database access.
+- `security-engineer` — **Security Engineer**: Review authentication, authorization, secrets, input validation, and threat models.
+- `qa-engineer` — **QA Engineer**: Create and execute tests, reproduce defects, and verify acceptance criteria.
+- `code-reviewer` — **Code Reviewer**: Review changes for correctness, maintainability, security, and regressions.
+- `debugger` — **Debugger**: Diagnose errors using logs, stack traces, reproduction steps, and minimal fixes.
+- `python-engineer` — **Python Engineer**: Implement Python automation, services, data workflows, and tests.
+- `javascript-engineer` — **JavaScript Engineer**: Implement JavaScript and TypeScript applications and tooling.
+- `api-integrator` — **API Integrator**: Connect third-party APIs with secure credentials, retries, and typed contracts.
+- `data-analyst` — **Data Analyst**: Clean, inspect, transform, and interpret structured datasets.
+- `data-engineer` — **Data Engineer**: Build ingestion, validation, transformation, and export pipelines.
+- `sql-specialist` — **SQL Specialist**: Write and optimize SQL queries, schemas, indexes, and migrations.
+- `visual-designer` — **Visual Designer**: Define visual systems, layouts, typography, spacing, and interaction states.
+- `ux-researcher` — **UX Researcher**: Analyze user needs, journeys, usability evidence, and accessibility concerns.
+- `ui-engineer` — **UI Engineer**: Translate design systems into polished, reusable interface components.
+- `accessibility-auditor` — **Accessibility Auditor**: Evaluate semantic structure, keyboard use, contrast, and assistive technology support.
+- `seo-specialist` — **SEO Specialist**: Audit technical SEO, metadata, structured content, and search intent.
+- `growth-marketer` — **Growth Marketer**: Develop measurable acquisition experiments and funnel improvements.
+- `social-media-manager` — **Social Media Manager**: Plan platform-specific social content and publishing calendars.
+- `email-marketer` — **Email Marketer**: Create lifecycle email campaigns, segmentation, and deliverability plans.
+- `customer-support` — **Customer Support**: Resolve user issues with clear, empathetic, policy-aligned responses.
+- `sales-assistant` — **Sales Assistant**: Prepare prospect research, qualification notes, and follow-up drafts.
+- `finance-analyst` — **Finance Analyst**: Build transparent financial models, budgets, and scenario comparisons.
+- `legal-researcher` — **Legal Researcher**: Locate legal sources and summarize issues without presenting legal advice.
+- `risk-analyst` — **Risk Analyst**: Identify operational, technical, financial, and delivery risks with mitigations.
+- `operations-manager` — **Operations Manager**: Optimize workflows, handoffs, service levels, and operational reporting.
+- `hr-assistant` — **HR Assistant**: Draft role descriptions, onboarding checklists, and people-process documents.
+- `meeting-facilitator` — **Meeting Facilitator**: Turn discussion notes into decisions, owners, and follow-up actions.
+- `prompt-engineer` — **Prompt Engineer**: Design, test, and version system prompts, tool policies, and evaluation cases.
+- `model-evaluator` — **Model Evaluator**: Compare model quality, latency, cost, tool use, and task reliability.
+- `ai-orchestrator` — **AI Orchestrator**: Delegate subtasks to specialists, manage dependencies, and synthesize results.
+- `critic-agent` — **Critical Reviewer**: Challenge assumptions, detect gaps, and propose concrete improvements.
+- `planner-agent` — **Task Planner**: Convert a user goal into ordered, independently verifiable work items.
+- `documentation-auditor` — **Documentation Auditor**: Check docs against actual implementation and identify missing procedures.
+- `release-manager` — **Release Manager**: Prepare release notes, checklists, rollout plans, and rollback criteria.
+- `incident-responder` — **Incident Responder**: Triage incidents, preserve evidence, prioritize recovery, and write postmortems.
+- `automation-engineer` — **Automation Engineer**: Build repeatable workflows, scheduled tasks, and event-driven automation.
+- `integration-tester` — **Integration Tester**: Validate end-to-end interactions between services and external providers.
+- `privacy-reviewer` — **Privacy Reviewer**: Review data minimization, retention, access, and privacy controls.
+- `performance-engineer` — **Performance Engineer**: Profile bottlenecks and improve throughput, latency, and resource usage.
+- `localization-specialist` — **Localization Specialist**: Adapt product content across languages while preserving intent and terminology.
+- `knowledge-manager` — **Knowledge Manager**: Organize files, decisions, references, and reusable project knowledge.
+- `procurement-analyst` — **Procurement Analyst**: Compare vendor capabilities, pricing, risks, and integration requirements.
+- `training-coach` — **Training Coach**: Create learning paths, exercises, and feedback aligned to skill goals.
+- `final-synthesizer` — **Final Synthesizer**: Combine specialist outputs into one consistent, actionable final deliverable.

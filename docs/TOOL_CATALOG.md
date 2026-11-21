@@ -1,0 +1,141 @@
+# Tool catalog
+
+- `web.search` — **Search web sources**: Searches configured search provider endpoint when credentials are configured.
+- `web.open` — **Open URL**: Fetches a public HTTP or HTTPS page with timeout and content limits.
+- `web.extract` — **Extract page text**: Extracts readable text from fetched HTML.
+- `files.search` — **Search workspace files**: Searches metadata and indexed text in workspace storage.
+- `files.read` — **Read workspace file**: Reads a file by safe workspace-relative path.
+- `files.write` — **Write workspace file**: Writes text into the isolated workspace.
+- `files.list` — **List workspace files**: Lists files under the current workspace root.
+- `files.delete` — **Delete workspace file**: Deletes a workspace file after explicit confirmation.
+- `writing.document` — **Create document**: Creates a Markdown document in workspace storage.
+- `writing.markdown` — **Format Markdown**: Formats supplied content as a Markdown artifact.
+- `writing.rewrite` — **Rewrite text**: Rewrites supplied text according to explicit instructions.
+- `writing.grammar` — **Grammar review**: Reviews grammar and clarity while preserving meaning.
+- `writing.summarize` — **Summarize content**: Produces a concise structured summary.
+- `code.read` — **Read source code**: Reads source files from the workspace.
+- `code.write` — **Write source code**: Writes source code to the workspace.
+- `code.review` — **Review source code**: Runs static heuristic review on source text.
+- `code.test` — **Run project tests**: Runs configured project test command in the isolated Linux container.
+- `terminal.exec` — **Execute Linux command**: Runs an argv command in the isolated Cloudflare Container workspace.
+- `terminal.files` — **Linux filesystem operations**: Runs safe file and directory operations in the isolated container.
+- `terminal.install` — **Install packages**: Installs packages using npm, pnpm, pip, apt-get, or cargo in the container.
+- `terminal.process` — **Inspect processes**: Inspects process state in the isolated container.
+- `terminal.git` — **Git operations**: Runs git commands in the isolated project workspace.
+- `database.query` — **Query database**: Executes parameterized SQL against the workspace D1 database.
+- `database.migrate` — **Apply database migration**: Applies a migration script after validation.
+- `email.send` — **Send email**: Sends email through configured Resend credentials.
+- `agents.dispatch` — **Dispatch agents**: Queues a task for selected specialist agents.
+- `agents.status` — **Read agent status**: Reads per-agent job state and output.
+- `runs.status` — **Read run status**: Reads task progress and terminal state.
+- `runs.logs` — **Read run logs**: Reads execution logs for a run.
+- `reports.write` — **Write run report**: Stores a report artifact in R2.
+- `charts.create` — **Create chart specification**: Creates a JSON chart artifact for the UI.
+- `data.analyze` — **Analyze dataset**: Computes basic descriptive statistics for tabular JSON data.
+- `data.transform` — **Transform dataset**: Maps, filters, and normalizes JSON rows.
+- `models.compare` — **Compare AI models**: Compares model metadata supplied by the workspace owner.
+- `secrets.read` — **Read secret metadata**: Reads configured secret names only; never returns secret values.
+- `cloudflare.deploy` — **Cloudflare deployment helper**: Runs Wrangler deployment commands in the authorized project container.
+- `security.scan` — **Security source scan**: Scans code for common dangerous patterns and exposed credentials.
+- `design.tokens` — **Generate design tokens**: Creates a design token JSON artifact.
+- `design.review` — **Review UI source**: Checks UI source for basic accessibility and responsive patterns.
+- `crm.records` — **CRM record tools**: Reads or writes configured CRM integration records.
+- `calendar.events` — **Calendar events**: Create and list calendar events through configured calendar integration.
+- `browser.navigate` — **Browser navigation**: Fetches and follows safe public web pages.
+- `browser.screenshot` — **Browser screenshot**: Captures a page screenshot through configured browser service.
+- `browser.click` — **Browser interaction**: Clicks a locator through configured browser service.
+- `browser.type` — **Browser text input**: Types into a locator through configured browser service.
+- `browser.extract` — **Browser extraction**: Extracts visible page text through configured browser service.
+- `storage.upload` — **Upload artifact**: Stores an artifact in R2 or configured Firebase Storage.
+- `storage.download` — **Download artifact**: Retrieves an artifact from R2 or configured Firebase Storage.
+- `storage.delete` — **Delete artifact**: Deletes an artifact after authorization.
+- `storage.search` — **Search artifacts**: Searches workspace artifact metadata.
+- `queue.enqueue` — **Enqueue job**: Enqueues a durable task message.
+- `queue.inspect` — **Inspect queue**: Reads job state and queue metadata.
+- `workflow.start` — **Start workflow**: Starts a persisted multi-step workflow.
+- `workflow.pause` — **Pause workflow**: Pauses a workflow between task steps.
+- `workflow.resume` — **Resume workflow**: Resumes a paused workflow.
+- `workflow.cancel` — **Cancel workflow**: Cancels a queued workflow.
+- `agent.create` — **Create agent**: Creates a custom agent definition.
+- `agent.update` — **Update agent**: Updates an agent prompt, tools, or model binding.
+- `agent.delete` — **Delete agent**: Deletes a custom agent definition.
+- `provider.list` — **List providers**: Lists configured AI provider adapters.
+- `provider.models` — **List models**: Lists models configured for a provider.
+- `provider.keys` — **Manage API keys**: Manages encrypted provider key metadata.
+- `provider.health` — **Provider health**: Checks configured provider connectivity.
+- `provider.rotate` — **Rotate provider key**: Rotates credentials using secure secret entry.
+- `chat.send` — **Send chat message**: Sends a message into the active agent workspace.
+- `chat.history` — **Read chat history**: Reads conversation messages.
+- `chat.export` — **Export chat**: Exports conversation history as Markdown.
+- `prompt.test` — **Test system prompt**: Runs a prompt against a selected model.
+- `prompt.version` — **Version prompt**: Stores a versioned system prompt.
+- `prompt.rollback` — **Rollback prompt**: Restores a previous prompt version.
+- `task.create` — **Create task**: Creates a task with explicit acceptance criteria.
+- `task.assign` — **Assign task**: Assigns a task to one or more agents.
+- `task.complete` — **Complete task**: Marks a task complete with result evidence.
+- `task.block` — **Block task**: Marks a task blocked and records a reason.
+- `task.decompose` — **Decompose task**: Creates dependency-aware subtasks.
+- `task.validate` — **Validate task**: Checks task output against acceptance criteria.
+- `memory.store` — **Store memory**: Stores approved project facts in workspace memory.
+- `memory.read` — **Read memory**: Retrieves approved project memory.
+- `memory.search` — **Search memory**: Searches project memory by semantic or keyword query.
+- `memory.delete` — **Delete memory**: Deletes selected workspace memory after authorization.
+- `notification.push` — **Push notification**: Sends a configured notification.
+- `notification.email` — **Email notification**: Sends a transactional notification email.
+- `notification.webhook` — **Webhook notification**: Sends a signed webhook event.
+- `webhook.create` — **Create webhook**: Registers a workspace webhook endpoint.
+- `webhook.test` — **Test webhook**: Sends a test event to a registered webhook.
+- `webhook.logs` — **Webhook logs**: Reads webhook delivery logs.
+- `auth.invite` — **Invite member**: Creates an invitation for a workspace member.
+- `auth.roles` — **Manage roles**: Reads or updates workspace role assignments.
+- `auth.audit` — **Audit access**: Reads authentication and authorization audit events.
+- `audit.events` — **Audit events**: Reads immutable audit records.
+- `billing.usage` — **Read usage**: Reads usage and execution metering records.
+- `billing.limits` — **Read limits**: Reads configured workspace quotas.
+- `scheduler.create` — **Schedule task**: Creates a scheduled task.
+- `scheduler.list` — **List schedules**: Lists scheduled tasks.
+- `scheduler.delete` — **Delete schedule**: Deletes a scheduled task.
+- `git.status` — **Git status**: Reads repository working tree state.
+- `git.diff` — **Git diff**: Reads current source changes.
+- `git.commit` — **Git commit**: Creates a commit in the project workspace.
+- `git.branch` — **Git branch**: Creates or switches a project branch.
+- `package.install` — **Install dependency**: Installs a project dependency in the Linux container.
+- `package.audit` — **Audit dependencies**: Runs package manager security audit.
+- `package.list` — **List dependencies**: Lists installed project dependencies.
+- `linux.pwd` — **Print working directory**: Returns the Linux working directory.
+- `linux.ls` — **List directory**: Lists files and folders.
+- `linux.mkdir` — **Create directory**: Creates a directory safely.
+- `linux.cp` — **Copy file**: Copies a workspace file.
+- `linux.mv` — **Move file**: Moves a workspace file.
+- `linux.rm` — **Remove file**: Removes a file inside the isolated workspace.
+- `linux.cat` — **Read file**: Reads a text file from the workspace.
+- `linux.grep` — **Search text**: Searches workspace files for a text pattern.
+- `linux.find` — **Find files**: Finds files below the workspace root.
+- `linux.chmod` — **Change file mode**: Changes permissions within workspace bounds.
+- `linux.env` — **Inspect environment**: Lists allowed non-secret environment metadata.
+- `linux.python` — **Run Python**: Executes Python code in the isolated container.
+- `linux.node` — **Run Node.js**: Executes Node.js scripts in the isolated container.
+- `linux.npm` — **Run npm**: Runs npm commands in the project workspace.
+- `linux.pip` — **Run pip**: Installs or inspects Python dependencies.
+- `linux.apt` — **Run apt**: Installs approved Debian packages in the container.
+- `linux.curl` — **HTTP request**: Makes an HTTP request from the container when network is enabled.
+- `linux.wget` — **Download file**: Downloads a file from an approved URL.
+- `linux.tar` — **Archive files**: Creates or extracts project archives.
+- `linux.zip` — **Zip files**: Creates or extracts ZIP archives.
+- `linux.unzip` — **Unzip files**: Extracts ZIP files into workspace.
+- `linux.ps` — **List processes**: Lists processes inside the container.
+- `linux.top` — **Resource snapshot**: Returns a process and resource snapshot.
+- `linux.df` — **Disk usage**: Reports container disk usage.
+- `linux.du` — **Directory usage**: Reports workspace directory size.
+- `linux.tail` — **Tail log**: Reads the end of a log file.
+- `linux.head` — **Head file**: Reads the start of a file.
+- `linux.sed` — **Edit text**: Performs bounded text replacement in a workspace file.
+- `linux.awk` — **Process text**: Processes line-oriented text in the workspace.
+- `linux.make` — **Run make**: Runs a Makefile target inside the container.
+- `linux.docker` — **Docker CLI**: Runs Docker commands when Docker-in-Docker is enabled.
+- `linux.ssh` — **SSH helper**: Runs SSH client commands when authorized keys are configured.
+- `linux.rsync` — **Sync files**: Synchronizes project files within approved paths.
+- `linux.node.version` — **Node version**: Returns the installed Node.js version.
+- `linux.python.version` — **Python version**: Returns the installed Python version.
+- `agent.message` — **Message another agent**: Sends a structured collaboration message to an authorized manager, report, or same-team agent in the current run.
+- `agent.inbox` — **Read agent inbox**: Retrieves structured collaboration messages for the current agent.

@@ -1,0 +1,77 @@
+name = "aether-multi-agent-os"
+main = "worker/index.ts"
+compatibility_date = "2026-11-21"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[vars]
+ALLOW_WORKSPACE_INTERNET = "false"
+WORKSPACE_INSTANCE = "standard-1"
+PUBLIC_APP_URL = "https://REPLACE_WITH_YOUR_WORKER_DOMAIN"
+
+[limits]
+# Paid Workers supports configurable CPU time up to 5 minutes per invocation.
+cpu_ms = 300000
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aether-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "ARTIFACTS"
+bucket_name = "aether-artifacts"
+
+[[queues.producers]]
+binding = "TASK_QUEUE"
+queue = "aether-agent-fanout"
+
+[[queues.consumers]]
+queue = "aether-agent-fanout"
+max_batch_size = 1
+max_batch_timeout = 1
+max_retries = 10
+retry_delay = 10
+dead_letter_queue = "aether-agent-fanout-dlq"
+# One fan-out consumer keeps creation below the 100 Workflow instances/second/workflow limit.
+max_concurrency = 1
+
+[[durable_objects.bindings]]
+name = "AGENT_COORDINATOR"
+class_name = "AgentCoordinator"
+
+[[durable_objects.bindings]]
+name = "LINUX_RUNNER"
+class_name = "LinuxRunner"
+
+[exports.AgentCoordinator]
+type = "durable-object"
+storage = "sqlite"
+
+[exports.LinuxRunner]
+type = "durable-object"
+storage = "sqlite"
+
+[[containers]]
+class_name = "LinuxRunner"
+scheduling_policy = "durable_object"
+
+[containers.images.base]
+dockerfile = "./Dockerfile"
+
+[[workflows]]
+name = "aether-agent-execution"
+binding = "AGENT_WORKFLOW"
+class_name = "AgentTaskWorkflow"
+
+[workflows.concurrency]
+# This is an adjustable provider-aware safety cap, not a claim of 16,111 live model calls.
+limit = 250
+
+[observability]
+enabled = true
